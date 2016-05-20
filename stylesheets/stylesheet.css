@@ -26,3 +26,15 @@ div {
     margin: auto;
     text-align: center;
 }
+
+a {
+    text-decoration: none;
+    font-family: Verdana;
+    color: Green;
+}
+
+span {
+    font-family: Verdana;
+    font-size: 24px;
+    color: red;
+}
