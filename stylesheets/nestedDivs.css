@@ -1,0 +1,11 @@
+.top_div { 
+  width: 200px;
+  position: relative;
+}
+
+.inner_div {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
