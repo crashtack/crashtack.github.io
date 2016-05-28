@@ -1,3 +1,15 @@
+div {
+    height: 50px;
+    width: 120px;
+    border-color: #6495ED;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #BCD2EE;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+}
+
 .top_div { 
   width: 200px;
   position: relative;
