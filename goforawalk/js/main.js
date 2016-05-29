@@ -35,13 +35,14 @@ Win and Losses
 
 alert("ready");
 
+/*
 var thisTest = new test("foobar");
 alert(thisTest.name);
 
 var Dude = new randomPerson("Dude");
 
 alert(Dude.responses.happy);
-
+*/
 /*
 RandomPerson.prototype.randomResponse = function() {
 	var randomNum = Math.floor((Math.random() * 2) +1);
@@ -54,7 +55,5 @@ RandomPerson.prototype.randomResponse = function() {
 };
 */
 
-
 var oldMan = new randomPerson("Old Man");
-
 alert("You meet an " + oldMan.name + " walking down the sidewalk. " + oldMan.randomResponse());
