@@ -10,27 +10,32 @@ function test1(name) {  // A simple class decleration
 function test(name) {  // A simple class decleration
 	this.name = name;
 	this.response = "hello there";
+	this.directions = false;
+	this.nextSpot = false;
+	this.interaction = false;
+	this.distanceFromLastSpot = false;
+	
 	this.builder = function() {
 		switch (this.name) {
 			case "home": {
 				this.directions = ["left","right"];
 				this.nextSpot = ["corner1","corner2"];
 				this.interaction = false;
-				this.distanceToFromLastSpot = 0;
+				this.distanceFromLastSpot = 0;
 				break;
 			}
 			case "corner1": {
 				this.directions = ["left","right"];
 				this.nextSpot = ["dognutShop","coffeeShop"];
 				this.interaction = "randomPerson";
-				this.distanceToFromLastSpot = 3;
+				this.distanceFromLastSpot = 3;
 				break;
 			}
 			case "dognutShop": {
 				this.directions = false;
 				this.nextSpot = false;
 				this.interaction = "shopOwner";
-				this.distanceToFromLastSpot = 2;
+				this.distanceFromLastSpot = 2;
 				break;
 			}
 		}	
