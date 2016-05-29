@@ -1,4 +1,4 @@
-var OtherDog = function(name) {
+function dog(name) {
 	this.name = name;
 	this.responses = {
 		happy: "The dog happily greets you in that special way that only dogs do.",
@@ -7,7 +7,7 @@ var OtherDog = function(name) {
 	};
 }
 
-var RandomPerson = function(name) {
+function RandomPerson(name) {
 	this.name = name;
 	this.responses = {
 		happy: "The waves and says hello",
