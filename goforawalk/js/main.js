@@ -55,6 +55,6 @@ RandomPerson.prototype.randomResponse = function() {
 */
 
 
-var oldMan = new RandomPerson("Old Man");
+var oldMan = new randomPerson("Old Man");
 
 alert("You meet an " + oldMan + " and he " + oldMan.randomResponse());
