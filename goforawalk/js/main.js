@@ -32,9 +32,10 @@ Win and Losses
 - Lose:	Make it back home without having a dognut
 */
 
+
 alert("ready");
 
-var message = "You walk out the door and can either pull you master to the left or the right/n/nEnter 'right' or 'left'";
+var message = "You walk out the door and can either pull you master to the left or the right\n\nEnter 'right' or 'left'";
 var answer = prompt(message);
 
 if(answer === "left") {
@@ -43,8 +44,9 @@ if(answer === "left") {
 }
 else if(answer === "right") {
 	message = "You walk to the corner.";
-	
+	alert(message);
 }
 else {
-	message = "That was not an exceptable response. Type 'left' or 'right'."
+	message = "Please only type 'left' or 'right'";
+	alert(message);
 }
