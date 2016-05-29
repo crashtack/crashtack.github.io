@@ -53,5 +53,5 @@ else {
 
 var currentSpot = new test("home");
 alert("who will we meet? \n\n" + currentSpot.interaction);
-currentSpot = test("corner1");
+currentSpot = new test("corner1");
 alert("who will we meet? \n\n" + currentSpot.interaction);
