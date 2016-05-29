@@ -15,7 +15,7 @@ function dog(name) {
 function RandomPerson(name) {
 	this.name = name;
 	this.responses = {
-		happy: "The waves and says hello",
-		indifferent: "The walks by without saying hello."
+		happy: "The " + this.name + " waves and says hello",
+		indifferent: "The " + this.name + " walks by without saying hello."
 	};
 }
