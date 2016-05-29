@@ -53,7 +53,7 @@ else {
 
 var currentSpot = new test("home");
 currentSpot.builder();
-alert("who will we meet? \n\n" + currentSpot.interaction);
+alert("You leave the house. Who will we meet? \n\n" + currentSpot.interaction);
 currentSpot = new test("corner1");
 currentSpot.builder();
-alert("who will we meet? \n\n" + currentSpot.interaction);
+alert("You walk to the corner. Who will we meet? \n\n" + currentSpot.interaction);
