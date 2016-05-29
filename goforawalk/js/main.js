@@ -1,3 +1,48 @@
-/* This will be the main Java control file */
+/*
+Title: Go For a Walk
+------------------------------------------	
+It's 10am Saturday morning and it's time to drag your owner outside for a walk.
+Where will you go and what will you see?
 
-alert("main.js just ran");
+----------
+Game World
+----------
+
+							Home
+				Left						Right
+		Dognut			Coffee			Park	Around the block
+
+Characters						Attributes
+----------						----------
+- You (Dog)						- name, age, mood, happy responce(), angry responce(), say()
+
+- Other dogs					- name, age, breed, color, mood, happy responce(), angry responce(), say()
+
+- Random person					- sex, age (young, old), scared responce(), happy responce()
+
+- shop owner					- sex, age, discusted responce(), happy responce()
+
+Win and Losses
+--------------
+- Win: 	make it to the dognut shop and get a free dognut 
+		by getting the 'happy responce' from the shop owner
+		
+		Chase a squirl up a tree
+		
+- Lose:	Make it back home without having a dognut
+
+*/
+
+RandomPerson.prototype.randomResponse = function() {
+	var randomNum = Math.floor((Math.random() * 2) +1);
+	if (randomNum === 1){
+		return this.responses.happy;
+	}
+	else {
+		return this.responses.indiffernet;
+	}
+};
+
+var man = new RandomPerson("Old Man");
+
+alert(man.randomResponse());
