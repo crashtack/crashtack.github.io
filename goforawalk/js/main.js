@@ -43,6 +43,8 @@ RandomPerson.prototype.randomResponse = function() {
 	}
 };
 
+alert("Ready?");
+
 var man = new RandomPerson("Old Man");
 
 alert(man.randomResponse());
