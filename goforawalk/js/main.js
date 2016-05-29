@@ -34,27 +34,17 @@ Win and Losses
 
 alert("ready");
 
-var thisTest = new test("foobar");
-alert(thisTest.name);
+var message = "You walk out the door and can either pull you master to the left or the right/n/nEnter 'right' or 'left'";
+answer = prompt(message);
 
-var Dude = new randomPerson("Dude");
-
-alert(Dude.responses.happy);
-
-/*
-RandomPerson.prototype.randomResponse = function() {
-	var randomNum = Math.floor((Math.random() * 2) +1);
-	if (randomNum === 1){
-		return this.responses.happy;
-	}
-	else {
-		return this.responses.indiffernet;
-	}
-};
-*/
-
-
-var oldMan = new randomPerson("Old Man");
-
-alert("You meet an " + oldMan.name + " walking down the sidewalk. " + oldMan.randomResponse());
-
+if(answer === "left") {
+	var oldMan = new randomPerson("Old Man");
+	alert("You meet an " + oldMan.name + " walking down the sidewalk. " + oldMan.randomResponse());	
+}
+else if(answer === "right") {
+	message = "You walk to the corner.";
+	
+}
+else {
+	message = "That was not an exceptable response. Type 'left' or 'right'."
+}
