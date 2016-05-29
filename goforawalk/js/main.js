@@ -43,7 +43,7 @@ alert("ready");
 var thisTest = new test("foobar");
 alert(thisTest.name);
 
-var man = new RandomPerson("Dude");
+var Dude = new RandomPerson("Dude");
 
 alert(Dude.responses.happy);
 
