@@ -33,11 +33,6 @@ Win and Losses
 
 */
 
-function test(name) {
-	this.name = name;
-	this.response = "hello there";
-}
-
 alert("ready");
 
 var thisTest = new test("foobar");
