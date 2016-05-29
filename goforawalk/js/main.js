@@ -52,6 +52,6 @@ else {
 }
 
 var currentSpot = new test("home");
-alert("who will we meet? \n\n" + currentSpot.interaction)
-currentSpot = test("corner1"):
-alert("who will we meet? \n\n" + currentSpot.interaction)
+alert("who will we meet? \n\n" + currentSpot.interaction);
+currentSpot = test("corner1");
+alert("who will we meet? \n\n" + currentSpot.interaction);
