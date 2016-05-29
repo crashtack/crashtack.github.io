@@ -35,7 +35,7 @@ Win and Losses
 alert("ready");
 
 var message = "You walk out the door and can either pull you master to the left or the right/n/nEnter 'right' or 'left'";
-answer = prompt(message);
+var answer = prompt(message);
 
 if(answer === "left") {
 	var oldMan = new randomPerson("Old Man");
