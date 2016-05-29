@@ -35,6 +35,9 @@ Win and Losses
 
 alert("ready");
 
+var thisTest = new test("foobar");
+alert(thisTest.name);
+
 var man = new RandomPerson("Dude");
 
 alert(Dude.responses.happy);
