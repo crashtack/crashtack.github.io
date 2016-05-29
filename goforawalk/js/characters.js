@@ -10,7 +10,7 @@ var OtherDog = function(name) {
 var RandomPerson = function(name) {
 	this.name = name;
 	this.responses = {
-		happy: "The " + name + " waves and says hello",
-		indifferent: "The " + name + " walks by without saying hello."
+		happy: "The waves and says hello",
+		indifferent: "The walks by without saying hello."
 	};
 }
