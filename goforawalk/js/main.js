@@ -33,6 +33,8 @@ Win and Losses
 
 */
 
+alert("ready");
+
 RandomPerson.prototype.randomResponse = function() {
 	var randomNum = Math.floor((Math.random() * 2) +1);
 	if (randomNum === 1){
