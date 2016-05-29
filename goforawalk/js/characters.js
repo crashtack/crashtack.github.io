@@ -1,3 +1,8 @@
+function test(name) {
+	this.name = name;
+	this.response = "hello there";
+}
+
 function dog(name) {
 	this.name = name;
 	this.responses = {
