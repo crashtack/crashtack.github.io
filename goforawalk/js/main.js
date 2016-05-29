@@ -35,6 +35,10 @@ Win and Losses
 
 alert("ready");
 
+var man = new RandomPerson("Dude");
+
+alert(Dude.responses.happy);
+
 RandomPerson.prototype.randomResponse = function() {
 	var randomNum = Math.floor((Math.random() * 2) +1);
 	if (randomNum === 1){
