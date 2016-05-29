@@ -38,10 +38,11 @@ alert("ready");
 var thisTest = new test("foobar");
 alert(thisTest.name);
 
-var Dude = new RandomPerson("Dude");
+var Dude = new randomPerson("Dude");
 
 alert(Dude.responses.happy);
 
+/*
 RandomPerson.prototype.randomResponse = function() {
 	var randomNum = Math.floor((Math.random() * 2) +1);
 	if (randomNum === 1){
@@ -51,9 +52,9 @@ RandomPerson.prototype.randomResponse = function() {
 		return this.responses.indiffernet;
 	}
 };
+*/
 
-alert("Ready?");
 
-var man = new RandomPerson("Old Man");
+var oldMan = new RandomPerson("Old Man");
 
-alert(man.randomResponse());
+alert("You meet an " + oldMan + " and he " + oldMan.randomResponse());
