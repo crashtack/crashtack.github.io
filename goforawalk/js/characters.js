@@ -213,4 +213,4 @@ var randomEncounter = function(distanceFromLastSpot) {
 		alert(randomPerson.randomResponse(type));
 	}
 	return;
-}:
+};
