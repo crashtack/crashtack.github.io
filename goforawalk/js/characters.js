@@ -157,7 +157,7 @@ function spot(name) {
 				this.distanceFromLastSpot = 1;
 				this.message = "coffeeShop message";
 				this.messageMaker = function() {
-					var clerk = new shopOwner(clerk,"vegan muffen");
+					var clerk = new shopOwner("clerk","vegan muffen");
 					this.message = "You've arive at the coffee shop. " + clerk.randomResponse() + "\n\nYou loose";					
 				};
 				break;
