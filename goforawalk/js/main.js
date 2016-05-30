@@ -37,6 +37,7 @@ var runInteraction = function() {
 	var successfulAnswer = false;
 	
 	if (currentSpot.dir1 === false) {		// Checks to see if you have reached a destination location
+		currentSpot.messageMaker();
 		alert(currentSpot.message);
 		return;
 	}
