@@ -182,11 +182,11 @@ function spot(name) {
 				this.message = "You make it to the park"
 				this.messageMaker = function() {
 					randomNum = Math.floor((Math.random() * 5) +1); // Gives a 50% chance for each message
-					if (randomNum <= 2){  // Gives a 60% chance to meat a squirl
-						this.message = "You've made it to the park play fetch with your owner and then head home for a nap.\n\nYou loose";
+					if (randomNum <= 3){  // Gives a 60% chance to meat a squirl
+						this.message = "You've made it to the park play fetch with your owner, but before heading home for a nap you chase a squirl up a tree\n\nYou Win!";				
 					}
 					else {
-						this.message = "You've made it to the park play fetch with your owner, but before heading home for a nap you chase a squirl up a tree\n\nYou Win!";
+						this.message = "You've made it to the park play fetch with your owner and then head home for a nap.\n\nYou loose";
 					}
 				};
 				break;
