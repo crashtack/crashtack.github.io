@@ -156,8 +156,10 @@ function spot(name) {
 				break;
 			}
 			case "corner2": {
-				this.directions = ["straight","right"];
-				this.nextSpot = ["park","aroundBlock"];
+				this.dir1 = "straight";
+				this.dir2 = "right";
+				this.nextSpot1 = "park";
+				this.nextSpot2 = "aroundBlock";
 				this.interaction = "randomPerson";
 				this.distanceFromLastSpot = 1;
 				break;
@@ -210,7 +212,8 @@ var randomEncounter = function(distanceFromLastSpot) {
 	}
 
 	if (type){
-		alert(randomPerson.randomResponse(type));
+		var person = randomPerson(type);
+		alert(person.randomResponse());
 	}
 	return;
 };
