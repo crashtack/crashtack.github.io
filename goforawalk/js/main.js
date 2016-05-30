@@ -33,6 +33,7 @@ Win and Losses
 */
 
 alert("ready");
+/*
 var home = new spot("home");
 
 
@@ -60,7 +61,7 @@ alert("You leave the house. Who will we meet? \n\n" + currentSpot.interaction);
 currentSpot = new test("corner1");
 currentSpot.builder();
 alert("You walk to the corner. Who will we meet? \n\n" + currentSpot.interaction);
-
+*/
 
 var runInteraction = function() {
 
