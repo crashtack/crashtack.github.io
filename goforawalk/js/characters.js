@@ -148,8 +148,8 @@ function spot(name) {
 				this.message = "dognutShop message";
 				this.messageMaker = function() {
 					var clerk = new shopOwner("shop owner","tasty bacon maple bar");
-					randomNum = Math.floor((Math.random() * 5) +1); // Gives a 50% chance for each message
-					if (randomNum <= 3){  // Gives a 60% chance to meat a squirl
+					randomNum = Math.floor((Math.random() * 5) +1); 
+					if (randomNum <= 3){  // Gives a 60% chance to get a dognut
 						this.message = "You've arive at the dognut shop. " + clerk.responses.happy + "\n\nYou Win!!!";				
 					}
 					else if (randomNum === 4){
@@ -212,6 +212,9 @@ function spot(name) {
 				this.interaction = "randomPerson";
 				this.distanceFromLastSpot = 3;
 				this.message = "It looks like you are going for a short walk around the block.\n\nYou loose\n\nAt least you will pass your favorite fire hidrent";
+				this.messageMaker = function() {
+					this.message = "It looks like you are going for a short walk around the block.\n\nYou loose\n\nAt least you will pass your favorite fire hidrent";
+				};
 				break;
 			}
 		}	
