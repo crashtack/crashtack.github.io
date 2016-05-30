@@ -135,7 +135,7 @@ function spot(name) {
 				this.nextSpot2 = "coffeeShop";
 				this.interaction = "randomPerson";
 				this.distanceFromLastSpot = 3;
-				this.message = "corner1 message";
+				this.message = "After walking 3 blocks you reach a corner. Do you want to go " + this.dir1 + " or " + this.dir2;
 				break;
 			}
 			case "dognutShop": {
@@ -165,7 +165,7 @@ function spot(name) {
 				this.nextSpot2 = "aroundBlock";
 				this.interaction = "randomPerson";
 				this.distanceFromLastSpot = 1;
-				this.message = "corner2 message";
+				this.message = "After walking 1/2 a block you reach the corner. Do you want to go " + this.dir1 + " or " + this.dir2;
 				break;
 			}
 			case "park": {
@@ -185,7 +185,7 @@ function spot(name) {
 				this.nextSpot2 = false;
 				this.interaction = "randomPerson";
 				this.distanceFromLastSpot = 3;
-				this.message = "You turn right for a walk around the block"
+				this.message = "It looks like you are going for a short walk around the block.\n\nYou loose\n\nAt least you will pass your favorite fire hidrent";
 				break;
 			}
 		}	
