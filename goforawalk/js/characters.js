@@ -216,7 +216,7 @@ var randomEncounter = function(distanceFromLastSpot) {
 	}
 
 	if (type){
-		var person = randomPerson(type);
+		var person = new randomPerson(type);
 		alert(person.randomResponse());
 	}
 	return;
