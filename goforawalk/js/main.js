@@ -64,39 +64,43 @@ alert("You walk to the corner. Who will we meet? \n\n" + currentSpot.interaction
 */
 
 var runInteraction = function() {
-
+	var successfulAnswer = false;
+	
 	if (currentSpot.dir1 === false) {
 		alert(currentSpot.message);
 		return;
 	}
 	else {
 		var answer = prompt(currentSpot.message)
-		if (answer === currentSpot.dir1){
-			
-			currentSpot = new spot(currentSpot.nextSpot1);
-			currentSpot.builder();
-			
-			// Checks for a random encount while on the way to 
-			// the next spot based on the distance between them
-			randomEncounter(currentSpot.distanceFromLastSpot);
-			runInteraction(currentSpot.name);
-		}
-		else if (answer === currentSpot.dir2) {
-			currentSpot = new spot(currentSpot.nextSpot2);
-			currentSpot.builder();
-			
-			// Checks for a random encount while on the way to 
-			// the next spot based on the distance between them
-			randomEncounter(currentSpot.distanceFromLastSpot);
-			runInteraction(currentSpot.name);
-		}
-		else {
-			message = "Please only ender " + currentSpot.dir1 +  " or " + currentSpot.dir2;
-			alert(message);
+		while (!successfulAnswer) {
+			if (answer === currentSpot.dir1){
+				
+				currentSpot = new spot(currentSpot.nextSpot1);
+				currentSpot.builder();
+				
+				// Checks for a random encount while on the way to 
+				// the next spot based on the distance between them
+				randomEncounter(currentSpot.distanceFromLastSpot);
+				successfulAnswer = true;
+				runInteraction(currentSpot.name);
+							}
+			else if (answer === currentSpot.dir2) {
+				currentSpot = new spot(currentSpot.nextSpot2);
+				currentSpot.builder();
+				
+				// Checks for a random encount while on the way to 
+				// the next spot based on the distance between them
+				randomEncounter(currentSpot.distanceFromLastSpot);
+				successfulAnswer = true;
+				runInteraction(currentSpot.name);
+			}
+			else {
+				message = "Please only ender " + currentSpot.dir1 +  " or " + currentSpot.dir2;
+				alert(message);
+				successfulAnswer = false;
+			}
 		}
 	}
-
-	
 }; 
 
 var currentSpot = new spot("home");
