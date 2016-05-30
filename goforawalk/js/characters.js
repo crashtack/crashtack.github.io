@@ -91,7 +91,7 @@ function shopOwner(name, product) {
 	this.name = name;
 	this.product = product;
 	this.responses = {
-		happy: "The " + this.name + " greets you warmly and gives you a big " + product,
+		happy: "The " + this.name + " greets you warmly and gives you a " + product,
 		ignore: "The " + this.name + " ignores you",
 		angry: "The " + this.name + " yells at your owner to get you out of the shop"
 	};
@@ -156,6 +156,10 @@ function spot(name) {
 				this.interaction = "shopOwner";
 				this.distanceFromLastSpot = 1;
 				this.message = "coffeeShop message";
+				this.messageMaker = function() {
+					var clerk = new shopOwner(clerk,"vegan muffen");
+					this.message = "You've arive at the coffee shop. " + clerk.randomResponse() + "\n\nYou loose";					
+				};
 				break;
 			}
 			case "corner2": {
@@ -176,6 +180,15 @@ function spot(name) {
 				this.interaction = "randomPerson";
 				this.distanceFromLastSpot = 4;
 				this.message = "You make it to the park"
+				this.messageMaker = function() {
+					randomNum = Math.floor((Math.random() * 5) +1); // Gives a 50% chance for each message
+					if (randomNum <= 2){  // Gives a 60% chance to meat a squirl
+						this.message = "You've made it to the park play fetch with your owner and then head home for a nap.\n\nYou loose";
+					}
+					else {
+						this.message = "You've made it to the park play fetch with your owner, but before heading home for a nap you chase a squirl up a tree\n\nYou Win!";
+					}
+				};
 				break;
 			}
 			case "aroundBlock": {
@@ -192,13 +205,14 @@ function spot(name) {
 	};
 }
 
-// Create the randomEncounter Object with 2 methods
-// method 1 to check for a random encounter and return true/false
-// method 2 to selct the type of person encountered (Old Man, kid on bike, jogger, dog, Person pushing stroller)
+// Create the randomEncounter function
+// check for a random encounter and return true/false
+// selct the type of person encountered (Old Man, kid on bike, jogger, dog, Person pushing stroller)
 // run alert(ramdomPerson.randomResponse(type))
 var randomEncounter = function(distanceFromLastSpot) {
 	var randomNum = 0;
 	var type = false;
+	
 	
 	for (var i = 0; i < distanceFromLastSpot; i++) {
 		randomNum = Math.floor((Math.random() * 3) +1); // Gives a 33% chance for a random encounter for each block traveled
