@@ -90,7 +90,7 @@ var runInteraction = function() {
 			runInteraction(currentSpot.name);
 		}
 		else {
-			message = "Please only ender " + currentSpot.dir1 +  " or " + currentSpot.dir2";
+			message = "Please only ender " + currentSpot.dir1 +  " or " + currentSpot.dir2;
 			alert(message);
 		}
 	}
