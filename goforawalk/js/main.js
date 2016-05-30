@@ -32,24 +32,27 @@ Win and Losses
 - Lose:	Make it back home without having a dognut
 */
 
-
 alert("ready");
+var home = new spot("home");
+
 
 var message = "You walk out the door and can either pull you master to the left or the right\n\nEnter 'right' or 'left'";
 var answer = prompt(message);
 
-if(answer === "left") {
-	var oldMan = new randomPerson("Old Man");
-	alert("You meet an " + oldMan.name + " walking down the sidewalk. " + oldMan.randomResponse());	
-}
-else if(answer === "right") {
-	message = "You walk to the corner.";
-	alert(message);
-}
-else {
-	message = "Please only type 'left' or 'right'";
-	alert(message);
-}
+function question() {
+	if(answer === "left") {
+		var oldMan = new randomPerson("Old Man");
+		alert("You meet an " + oldMan.name + " walking down the sidewalk. " + oldMan.randomResponse());	
+	}
+	else if(answer === "right") {
+		message = "You walk to the corner.";
+		alert(message);
+	}
+	else {
+		message = "Please only type 'left' or 'right'";
+		alert(message);
+	}
+};
 
 var currentSpot = new test("home");
 currentSpot.builder();
@@ -57,3 +60,44 @@ alert("You leave the house. Who will we meet? \n\n" + currentSpot.interaction);
 currentSpot = new test("corner1");
 currentSpot.builder();
 alert("You walk to the corner. Who will we meet? \n\n" + currentSpot.interaction);
+
+
+var runInteraction = function() {
+
+	if (currentSpot.dir1 === false) {
+		alert(currentSpot.message);
+		return;
+	}
+	else {
+		var answer = prompt(currentSpot.message)
+		if (answer === dir1){
+			
+			currentSpot = new spot(nextSpot1);
+			currentSpot.builder();
+			
+			// Checks for a random encount while on the way to 
+			// the next spot based on the distance between them
+			randomEncounter(currentSpot.distanceFromLastSpot);
+			runInteraction(currentSpot.name);
+		}
+		else if (answer === dir2) {
+			currentSpot = new spot(nextSpot2);
+			currentSpot.builder();
+			
+			// Checks for a random encount while on the way to 
+			// the next spot based on the distance between them
+			randomEncounter(currentSpot.distanceFromLastSpot);
+			runInteraction(currentSpot.name);
+		}
+		else {
+			message = "Please only ender " + currentSpot.dir1 +  " or " + currentSpot.dir2";
+			alert(message);
+		}
+	}
+
+	
+}; 
+
+var currentSpot = new spot("home");
+currentSpot.builder();
+runInteraction();
