@@ -63,9 +63,9 @@ function dog(name) {
 function randomPerson(type) {
 	this.name = type;
 	this.responses = {
-		happy: "The " + this.name + " waves and says hello",
-		ignore: "The " + this.name + " goes by without saying hello",
-		angry: "The " + this.name + " crosses the street to pass you",
+		happy: "You see a " + this.name + ". The " + this.name + " waves and says hello",
+		ignore: "You see a " + this.name + ". The " + this.name + " goes by without saying hello",
+		angry: "You see a " + this.name + ". The " + this.name + " crosses the street to pass you",
 		happyDog: "The " + this.name + " happily greets you in that special way that only dogs do",
 		scaredDog: "The " + this.name + " cowers behind it's owner.",
 		angryDog: "The " + this.name + " growels and barks a waring at you"
@@ -146,6 +146,19 @@ function spot(name) {
 				this.interaction = "shopOwner";
 				this.distanceFromLastSpot = 2;
 				this.message = "dognutShop message";
+				this.messageMaker = function() {
+					var clerk = new shopOwner("shop owner","tasty bacon maple bar");
+					randomNum = Math.floor((Math.random() * 5) +1); // Gives a 50% chance for each message
+					if (randomNum <= 3){  // Gives a 60% chance to meat a squirl
+						this.message = "You've arive at the dognut shop. " + clerk.responses.happy + "\n\nYou Win!!!";				
+					}
+					else if (randomNum === 4){
+						this.message = "You've arive at the coffee shop. " + clerk.responses.ignore + "\n\nYou loose";
+					}
+					else {
+						this.message = "You've arive at the coffee shop. " + clerk.responses.angry + "\n\nYou loose";
+					}
+				};
 				break;
 			}
 			case "coffeeShop": {
@@ -183,10 +196,10 @@ function spot(name) {
 				this.messageMaker = function() {
 					randomNum = Math.floor((Math.random() * 5) +1); // Gives a 50% chance for each message
 					if (randomNum <= 3){  // Gives a 60% chance to meat a squirl
-						this.message = "You've made it to the park play fetch with your owner, but before heading home for a nap you chase a squirl up a tree\n\nYou Win!";				
+						this.message = "You've made it to the park and play fetch with your owner, but before heading home for a nap you chase a squirl up a tree\n\nYou Win!";				
 					}
 					else {
-						this.message = "You've made it to the park play fetch with your owner and then head home for a nap.\n\nYou loose";
+						this.message = "You've made it to the park and play fetch with your owner and then head home for a nap.\n\nYou loose";
 					}
 				};
 				break;
