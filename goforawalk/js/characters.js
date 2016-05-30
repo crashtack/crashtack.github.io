@@ -198,7 +198,7 @@ var randomEncounter = function(distanceFromLastSpot) {
 		randomNum = Math.floor((Math.random() * 3) +1); // Gives a 33% chance for a random encounter for each block traveled
 		if (randomNum === 1){
 			randomNum = Math.floor((Math.random() * 5) +1);
-			switch {
+			switch (randomNum){
 				case 1: type = "old man"; break;
 				case 2: type = "kid on a bike"; break;
 				case 3: type = "jogger"; break;
