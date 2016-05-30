@@ -72,9 +72,8 @@ var runInteraction = function() {
 	}
 	else {
 		var answer = prompt(currentSpot.message)
-		while (!successfulAnswer) {
+		while (successfulAnswer === false) {
 			if (answer === currentSpot.dir1){
-				
 				currentSpot = new spot(currentSpot.nextSpot1);
 				currentSpot.builder();
 				
@@ -83,7 +82,7 @@ var runInteraction = function() {
 				randomEncounter(currentSpot.distanceFromLastSpot);
 				successfulAnswer = true;
 				runInteraction(currentSpot.name);
-							}
+			}
 			else if (answer === currentSpot.dir2) {
 				currentSpot = new spot(currentSpot.nextSpot2);
 				currentSpot.builder();
