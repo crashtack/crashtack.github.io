@@ -70,9 +70,9 @@ var runInteraction = function() {
 	}
 	else {
 		var answer = prompt(currentSpot.message)
-		if (answer === dir1){
+		if (answer === currentSpot.dir1){
 			
-			currentSpot = new spot(nextSpot1);
+			currentSpot = new spot(currentSpot.nextSpot1);
 			currentSpot.builder();
 			
 			// Checks for a random encount while on the way to 
@@ -80,8 +80,8 @@ var runInteraction = function() {
 			randomEncounter(currentSpot.distanceFromLastSpot);
 			runInteraction(currentSpot.name);
 		}
-		else if (answer === dir2) {
-			currentSpot = new spot(nextSpot2);
+		else if (answer === currentSpot.dir2) {
+			currentSpot = new spot(currentSpot.nextSpot2);
 			currentSpot.builder();
 			
 			// Checks for a random encount while on the way to 
