@@ -1,4 +1,7 @@
 /* Initial style sheet */
+body {
+	background-color: grey;
+}
 
 img {
 	display: block;
